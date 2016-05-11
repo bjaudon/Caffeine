@@ -1,10 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Linq;
+﻿/*
+ * Name: About Form
+ * Synopsis: About Caffeine dialog.
+ * Author: Bryan Jaudon <bryan.jaudon@gmail.com>
+ * Date: 5/10/2016
+ */
+
+
+using System;
 using System.Reflection;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Caffeine
@@ -16,12 +19,13 @@ namespace Caffeine
         public About()
         {
             InitializeComponent();
+            // Compiler DEBUG conditional. Set debug to true if this is a debug build so that it will show in the dialog.
 #if DEBUG
             debug = true;
 #endif
             this.Text = String.Format("About {0}", AssemblyTitle);
             this.labelProductName.Text = AssemblyProduct;
-            if (debug)
+            if (debug) // Check if debug build
             {
                 this.labelVersion.Text = String.Format("Version {0} {1}", AssemblyVersion, "DEBUG");
             }
