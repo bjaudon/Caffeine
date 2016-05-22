@@ -12,7 +12,7 @@ using System.Runtime.InteropServices;
 
 namespace Caffeine
 {
-    internal class ExecutionState
+    internal static class ExecutionState
     {
         public enum EXECUTION_STATE : uint
         {            
@@ -35,8 +35,15 @@ namespace Caffeine
             ES_USER_PRESENT = 0x00000004,       // This value is not supported. If ES_USER_PRESENT is combined with other 
                                                 // esFlags values, the call will fail and none of the specified states will be 
                                                 // set.
+            ES_ERRORSTATE = 0
         }
-        [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+
+        /// <summary>
+        /// Use PInvoke to call the Windows System API for SetThreadExecutionState
+        /// </summary>
+        /// <param name="esFlags"></param>
+        /// <returns></returns>
+        [DllImport("kernel32.dll") ]
         public static extern EXECUTION_STATE SetThreadExecutionState(EXECUTION_STATE esFlags);
 
     }

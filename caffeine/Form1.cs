@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Windows.Forms;
+using static Caffeine.CaffeineCore;
 
 namespace Caffeine
 {
     public partial class Form1 : Form
     {
-        //Instantiate the CaffeineCore object
-        CaffeineCore caffeine = new CaffeineCore();
-
+        
         // Declare our activationDuration interval
         TimeInterval activationDuration;
 
@@ -25,7 +24,9 @@ namespace Caffeine
 
         }
 
-        // Enum to translate the Enum TimeInterval to Milliseconds
+       
+
+       // Enum to translate the Enum TimeInterval to Milliseconds
         private enum MinutesToMilliseconds : int
         {
             Indefinite = -1,
@@ -43,8 +44,11 @@ namespace Caffeine
         {
             InitializeComponent();
             this.Hide();
-
-            deactivateCaffeine();
+            
+            // Set initial state as deactivated.
+            notifyIcon1.Icon = Properties.Resources.inactive;
+            notifyIcon1.Text = "Caffeine is inactive.";
+            activateCaffeineToolStripMenuItem.Text = "Activate Caffeine";
 
             // Load User Preferences
             if (Properties.Settings.Default.activateAtLaunch) { activateCaffeine((TimeInterval)Properties.Settings.Default.defaultDuration); }
@@ -54,12 +58,16 @@ namespace Caffeine
             
         }
 
+        /// <summary>
+        /// Activate Caffeine to the specified duration. 
+        /// </summary>
+        /// <param name="duration"></param>
         private void activateCaffeine(TimeInterval duration)
         {
             try
             {
                 activationDuration = duration; // Set our duration
-                caffeine.setCaffeineMode(true); // Set caffeine enabled
+                setCaffeineMode(true); // Set caffeine enabled
                 notifyIcon1.Icon = Properties.Resources.active;
                 notifyIcon1.Text = "Caffeine is active."; // Change our notification icon and text
                 activateCaffeineToolStripMenuItem.Text = "Deactivate Caffeine";
@@ -70,11 +78,14 @@ namespace Caffeine
             }
         }
 
+        /// <summary>
+        /// Deactivate Caffeine
+        /// </summary>
         private void deactivateCaffeine()
         {
             try
             {
-                caffeine.setCaffeineMode(false); // Disable caffeine
+                setCaffeineMode(false); // Disable caffeine
                 notifyIcon1.Icon = Properties.Resources.inactive; // Set our notify icon and text
                 notifyIcon1.Text = "Caffeine is inactive.";
                 activateCaffeineToolStripMenuItem.Text = "Activate Caffeine";
@@ -86,110 +97,163 @@ namespace Caffeine
             }
         }
 
+        /// <summary>
+        /// Show out about box
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void aboutCaffeineToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Show the about box
+  
             About aboutBox = new About();
             aboutBox.ShowDialog();
         }
 
+        /// <summary>
+        /// Deactivate caffeine on exit, and exit the application.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Deactivate caffeine on exit
+
             deactivateCaffeine();
             Application.Exit();
         }
 
+        /// <summary>
+        /// Show our preferences window (welcome screen)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void preferencesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Show our preferences (welcome) window.
+
             PreferenceWindow preferences = new PreferenceWindow();
             preferences.ShowDialog();
         }
 
+        /// <summary>
+        /// Get our current enable interval, and disable Caffeine if time has been reached.
+        /// </summary>
         private void checkInterval()
         {
-            // Get our interval. If we aren't indefinite, find out where we are to see if we need to
-            // disable caffeine.
-
             int millis;
             if (activationDuration == TimeInterval.Indefinite) { millis = -1; }
             else { millis = (int)(MinutesToMilliseconds)Enum.Parse(typeof(MinutesToMilliseconds),activationDuration.ToString()); }
 
-            if (caffeine.getCaffeineMode())
+            if (getCaffeineMode())
             {
-                int currentInterval = caffeine.getActiveTime(); 
+                int currentInterval = getActiveTime(); 
                 if ((currentInterval >= millis) && (millis != -1))
                 {
                     deactivateCaffeine();
                 }
             }
         }
+        /// <summary>
+        /// Check our interval on every timer tick.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void timer1_Tick(object sender, EventArgs e)
         {
-            // Check our interval on every timer tick.
+
             checkInterval();
         }
-        
+
+        /// <summary>
+        /// Override application form closing and disable caffeine.
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            // Override application form closing and disable caffeine.
+            
             base.OnFormClosing(e);
             deactivateCaffeine();
         }
 
+        /// <summary>
+        /// Activate for x time.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void indefinitelyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Activate for x time
             activateCaffeine(TimeInterval.Indefinite);
         }
-
+        /// <summary>
+        /// Activate for x time.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void fiveMinuntesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Activate for x time
             activateCaffeine(TimeInterval.fiveMinutes);
         }
-
+        /// <summary>
+        /// Activate for x time.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tenMinutesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Activate for x time
             activateCaffeine(TimeInterval.tenMinutes);
         }
-
+        /// <summary>
+        /// Activate for x time.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void fifteenMinutesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            // Activate for x time
             activateCaffeine(TimeInterval.fifteenMinutes);
         }
-
+        /// <summary>
+        /// Activate for x time.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void thirtyMinutesToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            // Activate for x time
             activateCaffeine(TimeInterval.thirtyMinutes);
         }
-
+        /// <summary>
+        /// Activate for x time.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void oneHourToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Activate for x time
             activateCaffeine(TimeInterval.oneHour);
         }
-
+        /// <summary>
+        /// Activate for x time.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void twoHoursToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Activate for x time
             activateCaffeine(TimeInterval.twoHours);
         }
-
+        /// <summary>
+        /// Activate for x time.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void fiveHoursToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            // Activate for x time
             activateCaffeine(TimeInterval.fiveHours);
         }
-
+        /// <summary>
+        /// Toggle caffeine mode for the Activate/Deactivate contect menu.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void contextMenuStrip1_DoubleClick(object sender, EventArgs e)
         {
-            // Toggle caffeine mode. For Activate/Deactivate context menu, or NotifyIcon double click.
-            bool currentMode = caffeine.getCaffeineMode();
+
+            bool currentMode = getCaffeineMode();
             if (currentMode == true)
             {
                 deactivateCaffeine();
