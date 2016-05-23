@@ -13,14 +13,13 @@ namespace Caffeine
 {
     static class Program
     {
+        
+         // Use Mutex to ensure only one copy of Caffeine is running at a time.
+        static Mutex mutex = new Mutex(true, "{cfb38b98-cccc-452e-8d48-fd2562757fbd}");
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-
-
-        // Use Mutex to ensure only one copy of Caffeine is running at a time.
-        static Mutex mutex = new Mutex(true, "{cfb38b98-cccc-452e-8d48-fd2562757fbd}");
-
         [STAThread]
         static void Main()
         {
@@ -30,7 +29,7 @@ namespace Caffeine
                 {
                     Application.EnableVisualStyles(); 
                     Application.SetCompatibleTextRenderingDefault(false); 
-                    Application.Run(new Form1());
+                    Application.Run(new CaffeineMainForm());
                 }
                 finally
                 {

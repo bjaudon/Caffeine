@@ -1,16 +1,28 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Drawing;
 using static Caffeine.CaffeineCore;
 
 namespace Caffeine
 {
-    public partial class Form1 : Form
+    public partial class CaffeineMainForm : Form
     {
-        
-        // Declare our activationDuration interval
-        TimeInterval activationDuration;
 
-        // Enum for the TimeInterval settings
+        /// <summary>
+        /// Define our Active and Inactive icons.
+        /// </summary>
+        Icon _activeIcon = Properties.Resources._16x16_Active;
+        Icon _inactiveIcon = Properties.Resources._16x16_Inactive;
+        
+
+        /// <summary>
+        /// Declare our activationDuration interval
+        /// </summary>
+        TimeInterval _activationDuration;
+
+        /// <summary>
+        /// Enum for the TimeInterval settings 
+        /// </summary>
         private enum TimeInterval : int
         {
             Indefinite = 0,
@@ -24,9 +36,10 @@ namespace Caffeine
 
         }
 
-       
 
-       // Enum to translate the Enum TimeInterval to Milliseconds
+        /// <summary>
+        /// Enum to translate the Enum TimeInterval to Milliseconds
+        /// </summary>
         private enum MinutesToMilliseconds : int
         {
             Indefinite = -1,
@@ -39,16 +52,18 @@ namespace Caffeine
             fiveHours = 18000000,
         }
 
-
-        public Form1()
+        /// <summary>
+        /// Caffeine Main window. Hidden from view because we only use the NotifyIcon.
+        /// </summary>
+        public CaffeineMainForm()
         {
             InitializeComponent();
             this.Hide();
-            
+
             // Set initial state as deactivated.
-            notifyIcon1.Icon = Properties.Resources.inactive;
-            notifyIcon1.Text = "Caffeine is inactive.";
-            activateCaffeineToolStripMenuItem.Text = "Activate Caffeine";
+            notifyIcon1.Icon = _inactiveIcon;
+            notifyIcon1.Text = Properties.Resources.caffeineInactive;
+            activateCaffeineToolStripMenuItem.Text = Properties.Resources.toolStripInactive;
 
             // Load User Preferences
             if (Properties.Settings.Default.activateAtLaunch) { activateCaffeine((TimeInterval)Properties.Settings.Default.defaultDuration); }
@@ -66,11 +81,11 @@ namespace Caffeine
         {
             try
             {
-                activationDuration = duration; // Set our duration
+                _activationDuration = duration; // Set our duration
                 setCaffeineMode(true); // Set caffeine enabled
-                notifyIcon1.Icon = Properties.Resources.active;
-                notifyIcon1.Text = "Caffeine is active."; // Change our notification icon and text
-                activateCaffeineToolStripMenuItem.Text = "Deactivate Caffeine";
+                notifyIcon1.Icon = _activeIcon;
+                notifyIcon1.Text = Properties.Resources.caffeineActive; // Change our notification icon and text
+                activateCaffeineToolStripMenuItem.Text = Properties.Resources.toolStripActive;
             }
             catch (Exception ex) // Catch any errors
             {
@@ -86,9 +101,9 @@ namespace Caffeine
             try
             {
                 setCaffeineMode(false); // Disable caffeine
-                notifyIcon1.Icon = Properties.Resources.inactive; // Set our notify icon and text
-                notifyIcon1.Text = "Caffeine is inactive.";
-                activateCaffeineToolStripMenuItem.Text = "Activate Caffeine";
+                notifyIcon1.Icon = _inactiveIcon; // Set our notify icon and text
+                notifyIcon1.Text = Properties.Resources.caffeineInactive;
+                activateCaffeineToolStripMenuItem.Text = Properties.Resources.toolStripInactive;
                
             }
             catch (Exception ex) // Catch any errors
@@ -97,6 +112,7 @@ namespace Caffeine
             }
         }
 
+       
         /// <summary>
         /// Show out about box
         /// </summary>
@@ -131,6 +147,7 @@ namespace Caffeine
 
             PreferenceWindow preferences = new PreferenceWindow();
             preferences.ShowDialog();
+
         }
 
         /// <summary>
@@ -139,8 +156,8 @@ namespace Caffeine
         private void checkInterval()
         {
             int millis;
-            if (activationDuration == TimeInterval.Indefinite) { millis = -1; }
-            else { millis = (int)(MinutesToMilliseconds)Enum.Parse(typeof(MinutesToMilliseconds),activationDuration.ToString()); }
+            if (_activationDuration == TimeInterval.Indefinite) { millis = -1; }
+            else { millis = (int)(MinutesToMilliseconds)Enum.Parse(typeof(MinutesToMilliseconds),_activationDuration.ToString()); }
 
             if (getCaffeineMode())
             {

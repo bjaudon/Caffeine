@@ -63,6 +63,26 @@ namespace Caffeine.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
+        internal static System.Drawing.Icon _16x16_Active {
+            get {
+                object obj = ResourceManager.GetObject("_16x16_Active", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon _16x16_Inactive {
+            get {
+                object obj = ResourceManager.GetObject("_16x16_Inactive", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
         internal static System.Drawing.Icon active {
             get {
                 object obj = ResourceManager.GetObject("active", resourceCulture);
@@ -81,6 +101,15 @@ namespace Caffeine.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Caffeine is active..
+        /// </summary>
+        internal static string caffeineActive {
+            get {
+                return ResourceManager.GetString("caffeineActive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         internal static System.Drawing.Icon caffeineicon {
@@ -91,12 +120,59 @@ namespace Caffeine.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Caffeine is inactive..
+        /// </summary>
+        internal static string caffeineInactive {
+            get {
+                return ResourceManager.GetString("caffeineInactive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon caffeineNewIcon {
+            get {
+                object obj = ResourceManager.GetObject("caffeineNewIcon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgCaffeineNew {
+            get {
+                object obj = ResourceManager.GetObject("imgCaffeineNew", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         internal static System.Drawing.Icon inactive {
             get {
                 object obj = ResourceManager.GetObject("inactive", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deactivate Caffeine.
+        /// </summary>
+        internal static string toolStripActive {
+            get {
+                return ResourceManager.GetString("toolStripActive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Activate Caffeine.
+        /// </summary>
+        internal static string toolStripInactive {
+            get {
+                return ResourceManager.GetString("toolStripInactive", resourceCulture);
             }
         }
     }

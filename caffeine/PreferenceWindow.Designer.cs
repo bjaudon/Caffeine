@@ -60,10 +60,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Caffeine.Properties.Resources.caffeine;
+            this.pictureBox1.Image = global::Caffeine.Properties.Resources.imgCaffeineNew;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 86);
+            this.pictureBox1.Size = new System.Drawing.Size(130, 116);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 

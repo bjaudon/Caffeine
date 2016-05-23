@@ -86,7 +86,7 @@ namespace Caffeine
         public static string toString()
         {
             // Default toString() method to announce our current mode.
-            return "Caffeine is = " + (inCaffeineMode ? "Enabled":"Disabled");
+            return string.Format("Caffeine is {0}",(inCaffeineMode ? string.Format("Enabled. It was enabled on {0}",getLastEnabled().ToString()):"Disabled"));
         }
     }
 }
