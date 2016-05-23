@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Resources\caffeineNewIcon.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\caffeineNew_Black.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -116,6 +116,7 @@
     <None Include="Resources\inactive.ico" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\caffeineNew_Black.ico" />
     <Content Include="Resources\imgCaffeineNew.png" />
   </ItemGroup>
   <ItemGroup>
