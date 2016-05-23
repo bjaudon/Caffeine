@@ -13,7 +13,7 @@ namespace Caffeine
         /// </summary>
         Icon _activeIcon = Properties.Resources._16x16_Active;
         Icon _inactiveIcon = Properties.Resources._16x16_Inactive;
-        
+
 
         /// <summary>
         /// Declare our activationDuration interval
@@ -67,10 +67,10 @@ namespace Caffeine
 
             // Load User Preferences
             if (Properties.Settings.Default.activateAtLaunch) { activateCaffeine((TimeInterval)Properties.Settings.Default.defaultDuration); }
-            
-            if (Properties.Settings.Default.showWelcome) { preferencesToolStripMenuItem_Click(this,null); }
+
+            if (Properties.Settings.Default.showWelcome) { preferencesToolStripMenuItem_Click(this, null); }
             timer1.Enabled = true;
-            
+
         }
 
         /// <summary>
@@ -104,7 +104,7 @@ namespace Caffeine
                 notifyIcon1.Icon = _inactiveIcon; // Set our notify icon and text
                 notifyIcon1.Text = Properties.Resources.caffeineInactive;
                 activateCaffeineToolStripMenuItem.Text = Properties.Resources.toolStripInactive;
-               
+
             }
             catch (Exception ex) // Catch any errors
             {
@@ -112,7 +112,22 @@ namespace Caffeine
             }
         }
 
-       
+        /// <summary>
+        /// Toggles the caffeine mode
+        /// </summary>
+        private void toggleCaffeineMode()
+        {
+            bool currentMode = getCaffeineMode();
+            if (currentMode == true)
+            {
+                deactivateCaffeine();
+            }
+            else
+            {
+                activateCaffeine((TimeInterval)Properties.Settings.Default.defaultDuration);
+            }
+        }
+
         /// <summary>
         /// Show out about box
         /// </summary>
@@ -120,7 +135,7 @@ namespace Caffeine
         /// <param name="e"></param>
         private void aboutCaffeineToolStripMenuItem_Click(object sender, EventArgs e)
         {
-  
+
             About aboutBox = new About();
             aboutBox.ShowDialog();
         }
@@ -157,17 +172,18 @@ namespace Caffeine
         {
             int millis;
             if (_activationDuration == TimeInterval.Indefinite) { millis = -1; }
-            else { millis = (int)(MinutesToMilliseconds)Enum.Parse(typeof(MinutesToMilliseconds),_activationDuration.ToString()); }
+            else { millis = (int)(MinutesToMilliseconds)Enum.Parse(typeof(MinutesToMilliseconds), _activationDuration.ToString()); }
 
             if (getCaffeineMode())
             {
-                int currentInterval = getActiveTime(); 
+                int currentInterval = getActiveTime();
                 if ((currentInterval >= millis) && (millis != -1))
                 {
                     deactivateCaffeine();
                 }
             }
         }
+
         /// <summary>
         /// Check our interval on every timer tick.
         /// </summary>
@@ -185,7 +201,7 @@ namespace Caffeine
         /// <param name="e"></param>
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            
+
             base.OnFormClosing(e);
             deactivateCaffeine();
         }
@@ -199,6 +215,7 @@ namespace Caffeine
         {
             activateCaffeine(TimeInterval.Indefinite);
         }
+
         /// <summary>
         /// Activate for x time.
         /// </summary>
@@ -208,6 +225,7 @@ namespace Caffeine
         {
             activateCaffeine(TimeInterval.fiveMinutes);
         }
+
         /// <summary>
         /// Activate for x time.
         /// </summary>
@@ -217,6 +235,7 @@ namespace Caffeine
         {
             activateCaffeine(TimeInterval.tenMinutes);
         }
+
         /// <summary>
         /// Activate for x time.
         /// </summary>
@@ -226,6 +245,7 @@ namespace Caffeine
         {
             activateCaffeine(TimeInterval.fifteenMinutes);
         }
+
         /// <summary>
         /// Activate for x time.
         /// </summary>
@@ -235,6 +255,7 @@ namespace Caffeine
         {
             activateCaffeine(TimeInterval.thirtyMinutes);
         }
+
         /// <summary>
         /// Activate for x time.
         /// </summary>
@@ -244,6 +265,7 @@ namespace Caffeine
         {
             activateCaffeine(TimeInterval.oneHour);
         }
+
         /// <summary>
         /// Activate for x time.
         /// </summary>
@@ -253,6 +275,7 @@ namespace Caffeine
         {
             activateCaffeine(TimeInterval.twoHours);
         }
+
         /// <summary>
         /// Activate for x time.
         /// </summary>
@@ -262,6 +285,7 @@ namespace Caffeine
         {
             activateCaffeine(TimeInterval.fiveHours);
         }
+
         /// <summary>
         /// Toggle caffeine mode for the Activate/Deactivate contect menu.
         /// </summary>
@@ -270,14 +294,20 @@ namespace Caffeine
         private void contextMenuStrip1_DoubleClick(object sender, EventArgs e)
         {
 
-            bool currentMode = getCaffeineMode();
-            if (currentMode == true)
+            toggleCaffeineMode();
+
+        }
+
+        /// <summary>
+        /// MouseDown event to see if user single clicked notify icon with the left button.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void notifyIcon1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
             {
-                deactivateCaffeine();
-            } 
-            else
-            {
-                activateCaffeine((TimeInterval)Properties.Settings.Default.defaultDuration);
+                toggleCaffeineMode();
             }
         }
     }
