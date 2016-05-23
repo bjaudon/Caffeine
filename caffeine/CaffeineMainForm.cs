@@ -310,5 +310,11 @@ namespace Caffeine
                 toggleCaffeineMode();
             }
         }
+
+        private void CaffeineMainForm_Resize(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+            this.Hide();
+        }
     }
 }
