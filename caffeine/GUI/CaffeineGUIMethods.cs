@@ -38,8 +38,8 @@ namespace Caffeine
 
             // Set initial state as deactivated.
             notifyIcon1.Icon = _inactiveIcon;
-            notifyIcon1.Text = _strCaffeineInactive;
-            activateCaffeineToolStripMenuItem.Text = _strActivateCaffeine;
+            notifyIcon1.Text = _strNotifyCaffeineInactive;
+            activateCaffeineToolStripMenuItem.Text = _strContextActivateCaffeine;
 
             // Load User Preferences
             if (Properties.Settings.Default.activateAtLaunch) { activateCaffeine((TimeInterval)Properties.Settings.Default.defaultDuration); }
@@ -60,8 +60,8 @@ namespace Caffeine
                 _activationDuration = duration; // Set our duration
                 setCaffeineMode(true); // Set caffeine enabled
                 notifyIcon1.Icon = _activeIcon;
-                notifyIcon1.Text = _strCaffeineActive; // Change our notification icon and text
-                activateCaffeineToolStripMenuItem.Text = _strDeactivateCaffeine;
+                notifyIcon1.Text = _strNotifyCaffeineActive; // Change our notification icon and text
+                activateCaffeineToolStripMenuItem.Text = _strContextDeactivateCaffeine;
             }
             catch (Exception ex) // Catch any errors
             {
@@ -78,8 +78,8 @@ namespace Caffeine
             {
                 setCaffeineMode(false); // Disable caffeine
                 notifyIcon1.Icon = _inactiveIcon; // Set our notify icon and text
-                notifyIcon1.Text = _strCaffeineInactive;
-                activateCaffeineToolStripMenuItem.Text = _strActivateCaffeine;
+                notifyIcon1.Text = _strNotifyCaffeineInactive;
+                activateCaffeineToolStripMenuItem.Text = _strContextActivateCaffeine;
 
             }
             catch (Exception ex) // Catch any errors

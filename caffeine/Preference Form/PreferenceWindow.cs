@@ -7,6 +7,7 @@
 
 using System.Windows.Forms;
 using Microsoft.Win32;
+using static Caffeine.CaffeineStrings;
 
 namespace Caffeine
 {
@@ -18,17 +19,30 @@ namespace Caffeine
         public PreferenceWindow()
         {
             InitializeComponent();
-            
+
+            // Set Texts
+            btnClose.Text = _strPrefClose;
+            lblWelcome.Text = _strPrefWelcome;
+            chkAutoStart.Text = _strPrefAutoStart;
+            chkLaunchatStartup.Text = _strPrefActivateAtLaunch;
+            chkShowMessage.Text = _strPrefShowThisMessage;
+            lblDefaultDuration.Text = _strPrefDefaultDuration;
+            comboDefaultDuration.Items.AddRange(new object[] {
+            _strPrefIndefinitely, _strPref5Minutes, _strPref10Minutes, _strPref15Minutes, _strPref30Minutes,
+            _strPref1Hour, _strPref2Hours, _strPref5Hours});
+            Text = _strPrefWelcomeTitle;
+
+
             // Set our preferences
             comboDefaultDuration.SelectedIndex = Properties.Settings.Default.defaultDuration;
             chkLaunchatStartup.Checked = Properties.Settings.Default.activateAtLaunch;
             chkShowMessage.Checked = Properties.Settings.Default.showWelcome;
-            
+
             // Check if the Caffeine run value is set. If so, check our box.
-            if (rk.GetValue("Caffeine",null) != null)
+            if (rk.GetValue(_strName, null) != null)
             {
                 chkAutoStart.Checked = true;
-            }   
+            }
             else
             {
                 chkAutoStart.Checked = false;
@@ -48,11 +62,11 @@ namespace Caffeine
             // Set our Registry run key for Startup at logon.
             if (chkAutoStart.Checked)
             {
-                rk.SetValue("Caffeine", "\"" + System.Reflection.Assembly.GetExecutingAssembly().Location + "\"", RegistryValueKind.String);
+                rk.SetValue(_strName, "\"" + System.Reflection.Assembly.GetExecutingAssembly().Location + "\"", RegistryValueKind.String);
             }
             else
             {
-                rk.DeleteValue("Caffeine",false);
+                rk.DeleteValue(_strName, false);
             }
 
         }

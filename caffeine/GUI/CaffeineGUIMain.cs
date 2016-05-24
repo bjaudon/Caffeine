@@ -70,7 +70,7 @@ namespace Caffeine
             activateCaffeineToolStripMenuItem.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
             activateCaffeineToolStripMenuItem.Name = "activateCaffeineToolStripMenuItem";
             activateCaffeineToolStripMenuItem.Size = new Size(171, 22);
-            activateCaffeineToolStripMenuItem.Text = _strActivateCaffeine;
+            activateCaffeineToolStripMenuItem.Text = _strContextActivateCaffeine;
             activateCaffeineToolStripMenuItem.Click += new EventHandler(contextMenuStrip1_DoubleClick);
             // 
             // toolStripSeparator3
@@ -82,14 +82,14 @@ namespace Caffeine
             // 
             aboutCaffeineToolStripMenuItem.Name = "aboutCaffeineToolStripMenuItem";
             aboutCaffeineToolStripMenuItem.Size = new Size(171, 22);
-            aboutCaffeineToolStripMenuItem.Text = _strAboutCaffeine;
+            aboutCaffeineToolStripMenuItem.Text = _strContextAboutCaffeine;
             aboutCaffeineToolStripMenuItem.Click += new EventHandler(aboutCaffeineToolStripMenuItem_Click);
             // 
             // preferencesToolStripMenuItem
             // 
             preferencesToolStripMenuItem.Name = "preferencesToolStripMenuItem";
             preferencesToolStripMenuItem.Size = new Size(171, 22);
-            preferencesToolStripMenuItem.Text = _strPreferences;
+            preferencesToolStripMenuItem.Text = _strContextPreferences;
             preferencesToolStripMenuItem.Click += new EventHandler(preferencesToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
@@ -110,62 +110,62 @@ namespace Caffeine
              fiveHoursToolStripMenuItem1});
             activateForToolStripMenuItem.Name = "activateForToolStripMenuItem";
             activateForToolStripMenuItem.Size = new Size(171, 22);
-            activateForToolStripMenuItem.Text = _strActivateFor;
+            activateForToolStripMenuItem.Text = _strContextActivateFor;
             // 
             // indefinitelyToolStripMenuItem
             // 
             indefinitelyToolStripMenuItem.Name = "indefinitelyToolStripMenuItem";
             indefinitelyToolStripMenuItem.Size = new Size(133, 22);
-            indefinitelyToolStripMenuItem.Text = _strIndefinitely;
+            indefinitelyToolStripMenuItem.Text = _strContextIndefinitely;
             indefinitelyToolStripMenuItem.Click += new EventHandler(indefinitelyToolStripMenuItem_Click);
             // 
             // fiveMinuntesToolStripMenuItem
             // 
             fiveMinuntesToolStripMenuItem.Name = "fiveMinuntesToolStripMenuItem";
             fiveMinuntesToolStripMenuItem.Size = new Size(133, 22);
-            fiveMinuntesToolStripMenuItem.Text = _str5Minutes;
+            fiveMinuntesToolStripMenuItem.Text = _strContext5Minutes;
             fiveMinuntesToolStripMenuItem.Click += new EventHandler(fiveMinuntesToolStripMenuItem_Click);
             // 
             // tenMinutesToolStripMenuItem
             // 
             tenMinutesToolStripMenuItem.Name = "tenMinutesToolStripMenuItem";
             tenMinutesToolStripMenuItem.Size = new Size(133, 22);
-            tenMinutesToolStripMenuItem.Text = _str10Minutes;
+            tenMinutesToolStripMenuItem.Text = _strContext10Minutes;
             tenMinutesToolStripMenuItem.Click += new EventHandler(tenMinutesToolStripMenuItem_Click);
             // 
             // fifteenMinutesToolStripMenuItem1
             // 
             fifteenMinutesToolStripMenuItem1.Name = "fifteenMinutesToolStripMenuItem1";
             fifteenMinutesToolStripMenuItem1.Size = new Size(133, 22);
-            fifteenMinutesToolStripMenuItem1.Text = _str15Minutes;
+            fifteenMinutesToolStripMenuItem1.Text = _strContext15Minutes;
             fifteenMinutesToolStripMenuItem1.Click += new EventHandler(fifteenMinutesToolStripMenuItem1_Click);
             // 
             // thirtyMinutesToolStripMenuItem2
             // 
             thirtyMinutesToolStripMenuItem2.Name = "thirtyMinutesToolStripMenuItem2";
             thirtyMinutesToolStripMenuItem2.Size = new Size(133, 22);
-            thirtyMinutesToolStripMenuItem2.Text = _str30Minutes;
+            thirtyMinutesToolStripMenuItem2.Text = _strContext30Minutes;
             thirtyMinutesToolStripMenuItem2.Click += new EventHandler(thirtyMinutesToolStripMenuItem2_Click);
             // 
             // oneHourToolStripMenuItem
             // 
             oneHourToolStripMenuItem.Name = "oneHourToolStripMenuItem";
             oneHourToolStripMenuItem.Size = new Size(133, 22);
-            oneHourToolStripMenuItem.Text = _str1Hour;
+            oneHourToolStripMenuItem.Text = _strContext1Hour;
             oneHourToolStripMenuItem.Click += new EventHandler(oneHourToolStripMenuItem_Click);
             // 
             // twoHoursToolStripMenuItem
             // 
             twoHoursToolStripMenuItem.Name = "twoHoursToolStripMenuItem";
             twoHoursToolStripMenuItem.Size = new Size(133, 22);
-            twoHoursToolStripMenuItem.Text = _str2Hours;
+            twoHoursToolStripMenuItem.Text = _strContext2Hours;
             twoHoursToolStripMenuItem.Click += new EventHandler(twoHoursToolStripMenuItem_Click);
             // 
             // fiveHoursToolStripMenuItem1
             // 
             fiveHoursToolStripMenuItem1.Name = "fiveHoursToolStripMenuItem1";
             fiveHoursToolStripMenuItem1.Size = new Size(133, 22);
-            fiveHoursToolStripMenuItem1.Text = _str5Hours;
+            fiveHoursToolStripMenuItem1.Text = _strContext5Hours;
             fiveHoursToolStripMenuItem1.Click += new EventHandler(fiveHoursToolStripMenuItem1_Click);
             // 
             // toolStripSeparator2
@@ -177,7 +177,7 @@ namespace Caffeine
             // 
             quitToolStripMenuItem.Name = "quitToolStripMenuItem";
             quitToolStripMenuItem.Size = new Size(171, 22);
-            quitToolStripMenuItem.Text = _strQuit;
+            quitToolStripMenuItem.Text = _strContextQuit;
             quitToolStripMenuItem.Click += new EventHandler(quitToolStripMenuItem_Click);
             // 
             // timer1

@@ -9,6 +9,7 @@
 using System;
 using System.Reflection;
 using System.Windows.Forms;
+using static Caffeine.CaffeineStrings;
 
 namespace Caffeine
 {
@@ -33,7 +34,8 @@ namespace Caffeine
             {
                 this.labelVersion.Text = String.Format("Version {0}", AssemblyVersion);
             }
-            
+
+            this.okButton.Text = _strAboutOK;
             this.labelCopyright.Text = AssemblyCopyright;
             this.labelCompanyName.Text = AssemblyCompany;
             this.textBoxDescription.Text = AssemblyDescription;

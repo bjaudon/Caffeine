@@ -46,7 +46,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 3;
-            this.btnClose.Text = "&Close";
+            this.btnClose.Text = "";
             this.btnClose.UseVisualStyleBackColor = true;
             // 
             // label1
@@ -55,8 +55,7 @@
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(288, 62);
             this.lblWelcome.TabIndex = 5;
-            this.lblWelcome.Text = "Caffeine is now running. You can find its icon in the notification area of your t" +
-    "askbar. Right click the icon to show the Caffeine menu.";
+            this.lblWelcome.Text = "";
             // 
             // pictureBox1
             // 
@@ -75,7 +74,7 @@
             this.chkAutoStart.Name = "chkAutoStart";
             this.chkAutoStart.Size = new System.Drawing.Size(190, 17);
             this.chkAutoStart.TabIndex = 6;
-            this.chkAutoStart.Text = "Automatically start Caffeine at login";
+            this.chkAutoStart.Text = "";
             this.chkAutoStart.UseVisualStyleBackColor = true;
             this.chkAutoStart.CheckedChanged += new System.EventHandler(this.chkAutoStart_CheckedChanged);
             // 
@@ -86,7 +85,7 @@
             this.chkLaunchatStartup.Name = "chkLaunchatStartup";
             this.chkLaunchatStartup.Size = new System.Drawing.Size(154, 17);
             this.chkLaunchatStartup.TabIndex = 7;
-            this.chkLaunchatStartup.Text = "Activate Caffeine at launch";
+            this.chkLaunchatStartup.Text = "";
             this.chkLaunchatStartup.UseVisualStyleBackColor = true;
             this.chkLaunchatStartup.CheckedChanged += new System.EventHandler(this.chkLaunchatStartup_CheckedChanged);
             // 
@@ -97,7 +96,7 @@
             this.chkShowMessage.Name = "chkShowMessage";
             this.chkShowMessage.Size = new System.Drawing.Size(225, 17);
             this.chkShowMessage.TabIndex = 8;
-            this.chkShowMessage.Text = "Show this message when starting Caffeine";
+            this.chkShowMessage.Text = "";
             this.chkShowMessage.UseVisualStyleBackColor = true;
             this.chkShowMessage.CheckedChanged += new System.EventHandler(this.chkShowMessage_CheckedChanged);
             // 
@@ -108,20 +107,11 @@
             this.lblDefaultDuration.Name = "lblDefaultDuration";
             this.lblDefaultDuration.Size = new System.Drawing.Size(88, 13);
             this.lblDefaultDuration.TabIndex = 9;
-            this.lblDefaultDuration.Text = "Default duration: ";
+            this.lblDefaultDuration.Text = "";
             // 
             // comboDefaultDuration
             // 
             this.comboDefaultDuration.FormattingEnabled = true;
-            this.comboDefaultDuration.Items.AddRange(new object[] {
-            "Indefinitely",
-            "5 minutes",
-            "10 minutes",
-            "15 minutes",
-            "30 minutes",
-            "1 hour",
-            "2 hours",
-            "5 hours"});
             this.comboDefaultDuration.Location = new System.Drawing.Point(246, 183);
             this.comboDefaultDuration.Name = "comboDefaultDuration";
             this.comboDefaultDuration.Size = new System.Drawing.Size(121, 21);
@@ -149,7 +139,7 @@
             this.Name = "PreferenceWindow";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Welcome to Caffeine";
+            this.Text = "";
             this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
