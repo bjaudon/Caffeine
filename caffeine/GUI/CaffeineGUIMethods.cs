@@ -10,6 +10,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using static Caffeine.CaffeineCore;
 using static Caffeine.CaffeineEnums;
+using static Caffeine.CaffeineStrings;
 
 
 namespace Caffeine
@@ -37,8 +38,8 @@ namespace Caffeine
 
             // Set initial state as deactivated.
             notifyIcon1.Icon = _inactiveIcon;
-            notifyIcon1.Text = Properties.Resources.caffeineInactive;
-            activateCaffeineToolStripMenuItem.Text = Properties.Resources.toolStripInactive;
+            notifyIcon1.Text = _strCaffeineInactive;
+            activateCaffeineToolStripMenuItem.Text = _strActivateCaffeine;
 
             // Load User Preferences
             if (Properties.Settings.Default.activateAtLaunch) { activateCaffeine((TimeInterval)Properties.Settings.Default.defaultDuration); }
@@ -59,12 +60,12 @@ namespace Caffeine
                 _activationDuration = duration; // Set our duration
                 setCaffeineMode(true); // Set caffeine enabled
                 notifyIcon1.Icon = _activeIcon;
-                notifyIcon1.Text = Properties.Resources.caffeineActive; // Change our notification icon and text
-                activateCaffeineToolStripMenuItem.Text = Properties.Resources.toolStripActive;
+                notifyIcon1.Text = _strCaffeineActive; // Change our notification icon and text
+                activateCaffeineToolStripMenuItem.Text = _strDeactivateCaffeine;
             }
             catch (Exception ex) // Catch any errors
             {
-                MessageBox.Show(ex.ToString(), "Caffeine", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.ToString(), _strName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -77,13 +78,13 @@ namespace Caffeine
             {
                 setCaffeineMode(false); // Disable caffeine
                 notifyIcon1.Icon = _inactiveIcon; // Set our notify icon and text
-                notifyIcon1.Text = Properties.Resources.caffeineInactive;
-                activateCaffeineToolStripMenuItem.Text = Properties.Resources.toolStripInactive;
+                notifyIcon1.Text = _strCaffeineInactive;
+                activateCaffeineToolStripMenuItem.Text = _strActivateCaffeine;
 
             }
             catch (Exception ex) // Catch any errors
             {
-                MessageBox.Show(ex.ToString(), "Caffeine", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.ToString(), _strName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -28,45 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.lblWelcome = new System.Windows.Forms.Label();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.chkAutoStart = new System.Windows.Forms.CheckBox();
             this.chkLaunchatStartup = new System.Windows.Forms.CheckBox();
             this.chkShowMessage = new System.Windows.Forms.CheckBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblDefaultDuration = new System.Windows.Forms.Label();
             this.comboDefaultDuration = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button1.Location = new System.Drawing.Point(370, 230);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Close";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnClose.Location = new System.Drawing.Point(370, 230);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 3;
+            this.btnClose.Text = "&Close";
+            this.btnClose.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(148, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(288, 62);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Caffeine is now running. You can find its icon in the notification area of your t" +
+            this.lblWelcome.Location = new System.Drawing.Point(148, 25);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(288, 62);
+            this.lblWelcome.TabIndex = 5;
+            this.lblWelcome.Text = "Caffeine is now running. You can find its icon in the notification area of your t" +
     "askbar. Right click the icon to show the Caffeine menu.";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Caffeine.Properties.Resources.imgCaffeineNew;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 116);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.pbLogo.Image = global::Caffeine.Properties.Resources.imgCaffeineNew;
+            this.pbLogo.Location = new System.Drawing.Point(12, 12);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(130, 116);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogo.TabIndex = 4;
+            this.pbLogo.TabStop = false;
             // 
             // chkAutoStart
             // 
@@ -103,12 +103,12 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(148, 186);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Default duration: ";
+            this.lblDefaultDuration.AutoSize = true;
+            this.lblDefaultDuration.Location = new System.Drawing.Point(148, 186);
+            this.lblDefaultDuration.Name = "lblDefaultDuration";
+            this.lblDefaultDuration.Size = new System.Drawing.Size(88, 13);
+            this.lblDefaultDuration.TabIndex = 9;
+            this.lblDefaultDuration.Text = "Default duration: ";
             // 
             // comboDefaultDuration
             // 
@@ -132,17 +132,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.button1;
+            this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(458, 261);
             this.ControlBox = false;
             this.Controls.Add(this.comboDefaultDuration);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblDefaultDuration);
             this.Controls.Add(this.chkShowMessage);
             this.Controls.Add(this.chkLaunchatStartup);
             this.Controls.Add(this.chkAutoStart);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.lblWelcome);
+            this.Controls.Add(this.pbLogo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -151,7 +151,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome to Caffeine";
             this.TopMost = true;
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,13 +159,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label lblWelcome;
+        private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.CheckBox chkAutoStart;
         private System.Windows.Forms.CheckBox chkLaunchatStartup;
         private System.Windows.Forms.CheckBox chkShowMessage;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblDefaultDuration;
         private System.Windows.Forms.ComboBox comboDefaultDuration;
     }
 }

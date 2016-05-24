@@ -136,23 +136,11 @@
   <data name="_16x16_Inactive" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\16x16 Inactive.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="caffeineActive" xml:space="preserve">
-    <value>Caffeine is active.</value>
-  </data>
-  <data name="caffeineInactive" xml:space="preserve">
-    <value>Caffeine is inactive.</value>
-  </data>
   <data name="caffeineNewIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\caffeinenewicon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="imgCaffeineNew" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\imgcaffeinenew.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="toolStripActive" xml:space="preserve">
-    <value>Deactivate Caffeine</value>
-  </data>
-  <data name="toolStripInactive" xml:space="preserve">
-    <value>Activate Caffeine</value>
   </data>
   <data name="caffeineNew_Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\caffeineNew_Black.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

@@ -101,30 +101,12 @@ namespace Caffeine.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Caffeine is active..
-        /// </summary>
-        internal static string caffeineActive {
-            get {
-                return ResourceManager.GetString("caffeineActive", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         internal static System.Drawing.Icon caffeineicon {
             get {
                 object obj = ResourceManager.GetObject("caffeineicon", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Caffeine is inactive..
-        /// </summary>
-        internal static string caffeineInactive {
-            get {
-                return ResourceManager.GetString("caffeineInactive", resourceCulture);
             }
         }
         
@@ -165,24 +147,6 @@ namespace Caffeine.Properties {
             get {
                 object obj = ResourceManager.GetObject("inactive", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Deactivate Caffeine.
-        /// </summary>
-        internal static string toolStripActive {
-            get {
-                return ResourceManager.GetString("toolStripActive", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Activate Caffeine.
-        /// </summary>
-        internal static string toolStripInactive {
-            get {
-                return ResourceManager.GetString("toolStripInactive", resourceCulture);
             }
         }
     }

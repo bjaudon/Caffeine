@@ -8,32 +8,35 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using static Caffeine.CaffeineStrings;
 
 namespace Caffeine
 {
     public partial class CaffeineGUIMain : ApplicationContext
     {
         #region Form Object Instances
-        NotifyIcon notifyIcon1 = new NotifyIcon();
-        ContextMenuStrip contextMenuStrip1 = new ContextMenuStrip();
-        ToolStripMenuItem aboutCaffeineToolStripMenuItem = new ToolStripMenuItem();
-        ToolStripMenuItem preferencesToolStripMenuItem = new ToolStripMenuItem();
-        ToolStripSeparator toolStripSeparator1 = new ToolStripSeparator();
-        ToolStripMenuItem activateForToolStripMenuItem = new ToolStripMenuItem();
-        ToolStripMenuItem indefinitelyToolStripMenuItem = new ToolStripMenuItem();
-        ToolStripMenuItem fiveMinuntesToolStripMenuItem = new ToolStripMenuItem();
-        ToolStripMenuItem tenMinutesToolStripMenuItem = new ToolStripMenuItem();
-        ToolStripMenuItem fifteenMinutesToolStripMenuItem1 = new ToolStripMenuItem();
-        ToolStripMenuItem thirtyMinutesToolStripMenuItem2 = new ToolStripMenuItem();
-        ToolStripMenuItem oneHourToolStripMenuItem = new ToolStripMenuItem();
-        ToolStripMenuItem twoHoursToolStripMenuItem = new ToolStripMenuItem();
-        ToolStripMenuItem fiveHoursToolStripMenuItem1 = new ToolStripMenuItem();
-        ToolStripSeparator toolStripSeparator2 = new ToolStripSeparator();
-        ToolStripMenuItem quitToolStripMenuItem = new ToolStripMenuItem();
-        Timer timer1 = new Timer();
-        ToolStripMenuItem activateCaffeineToolStripMenuItem = new ToolStripMenuItem();
-        ToolStripSeparator toolStripSeparator3 = new ToolStripSeparator();
+        private NotifyIcon notifyIcon1 = new NotifyIcon();
+        private ContextMenuStrip contextMenuStrip1 = new ContextMenuStrip();
+        private ToolStripMenuItem aboutCaffeineToolStripMenuItem = new ToolStripMenuItem();
+        private ToolStripMenuItem preferencesToolStripMenuItem = new ToolStripMenuItem();
+        private ToolStripSeparator toolStripSeparator1 = new ToolStripSeparator();
+        private ToolStripMenuItem activateForToolStripMenuItem = new ToolStripMenuItem();
+        private ToolStripMenuItem indefinitelyToolStripMenuItem = new ToolStripMenuItem();
+        private ToolStripMenuItem fiveMinuntesToolStripMenuItem = new ToolStripMenuItem();
+        private ToolStripMenuItem tenMinutesToolStripMenuItem = new ToolStripMenuItem();
+        private ToolStripMenuItem fifteenMinutesToolStripMenuItem1 = new ToolStripMenuItem();
+        private ToolStripMenuItem thirtyMinutesToolStripMenuItem2 = new ToolStripMenuItem();
+        private ToolStripMenuItem oneHourToolStripMenuItem = new ToolStripMenuItem();
+        private ToolStripMenuItem twoHoursToolStripMenuItem = new ToolStripMenuItem();
+        private ToolStripMenuItem fiveHoursToolStripMenuItem1 = new ToolStripMenuItem();
+        private ToolStripSeparator toolStripSeparator2 = new ToolStripSeparator();
+        private ToolStripMenuItem quitToolStripMenuItem = new ToolStripMenuItem();
+        private Timer timer1 = new Timer();
+        private ToolStripMenuItem activateCaffeineToolStripMenuItem = new ToolStripMenuItem();
+        private ToolStripSeparator toolStripSeparator3 = new ToolStripSeparator();
         #endregion
+
+       
 
         private void InitializeComponent()
         {
@@ -67,7 +70,7 @@ namespace Caffeine
             activateCaffeineToolStripMenuItem.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
             activateCaffeineToolStripMenuItem.Name = "activateCaffeineToolStripMenuItem";
             activateCaffeineToolStripMenuItem.Size = new Size(171, 22);
-            activateCaffeineToolStripMenuItem.Text = "Activate Caffeine";
+            activateCaffeineToolStripMenuItem.Text = _strActivateCaffeine;
             activateCaffeineToolStripMenuItem.Click += new EventHandler(contextMenuStrip1_DoubleClick);
             // 
             // toolStripSeparator3
@@ -79,14 +82,14 @@ namespace Caffeine
             // 
             aboutCaffeineToolStripMenuItem.Name = "aboutCaffeineToolStripMenuItem";
             aboutCaffeineToolStripMenuItem.Size = new Size(171, 22);
-            aboutCaffeineToolStripMenuItem.Text = "About Caffeine...";
+            aboutCaffeineToolStripMenuItem.Text = _strAboutCaffeine;
             aboutCaffeineToolStripMenuItem.Click += new EventHandler(aboutCaffeineToolStripMenuItem_Click);
             // 
             // preferencesToolStripMenuItem
             // 
             preferencesToolStripMenuItem.Name = "preferencesToolStripMenuItem";
             preferencesToolStripMenuItem.Size = new Size(171, 22);
-            preferencesToolStripMenuItem.Text = "Preferences...";
+            preferencesToolStripMenuItem.Text = _strPreferences;
             preferencesToolStripMenuItem.Click += new EventHandler(preferencesToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
@@ -107,62 +110,62 @@ namespace Caffeine
              fiveHoursToolStripMenuItem1});
             activateForToolStripMenuItem.Name = "activateForToolStripMenuItem";
             activateForToolStripMenuItem.Size = new Size(171, 22);
-            activateForToolStripMenuItem.Text = "Activate For";
+            activateForToolStripMenuItem.Text = _strActivateFor;
             // 
             // indefinitelyToolStripMenuItem
             // 
             indefinitelyToolStripMenuItem.Name = "indefinitelyToolStripMenuItem";
             indefinitelyToolStripMenuItem.Size = new Size(133, 22);
-            indefinitelyToolStripMenuItem.Text = "Indefinitely";
+            indefinitelyToolStripMenuItem.Text = _strIndefinitely;
             indefinitelyToolStripMenuItem.Click += new EventHandler(indefinitelyToolStripMenuItem_Click);
             // 
             // fiveMinuntesToolStripMenuItem
             // 
             fiveMinuntesToolStripMenuItem.Name = "fiveMinuntesToolStripMenuItem";
             fiveMinuntesToolStripMenuItem.Size = new Size(133, 22);
-            fiveMinuntesToolStripMenuItem.Text = "5 minuntes";
+            fiveMinuntesToolStripMenuItem.Text = _str5Minutes;
             fiveMinuntesToolStripMenuItem.Click += new EventHandler(fiveMinuntesToolStripMenuItem_Click);
             // 
             // tenMinutesToolStripMenuItem
             // 
             tenMinutesToolStripMenuItem.Name = "tenMinutesToolStripMenuItem";
             tenMinutesToolStripMenuItem.Size = new Size(133, 22);
-            tenMinutesToolStripMenuItem.Text = "10 minutes";
+            tenMinutesToolStripMenuItem.Text = _str10Minutes;
             tenMinutesToolStripMenuItem.Click += new EventHandler(tenMinutesToolStripMenuItem_Click);
             // 
             // fifteenMinutesToolStripMenuItem1
             // 
             fifteenMinutesToolStripMenuItem1.Name = "fifteenMinutesToolStripMenuItem1";
             fifteenMinutesToolStripMenuItem1.Size = new Size(133, 22);
-            fifteenMinutesToolStripMenuItem1.Text = "15 minutes";
+            fifteenMinutesToolStripMenuItem1.Text = _str15Minutes;
             fifteenMinutesToolStripMenuItem1.Click += new EventHandler(fifteenMinutesToolStripMenuItem1_Click);
             // 
             // thirtyMinutesToolStripMenuItem2
             // 
             thirtyMinutesToolStripMenuItem2.Name = "thirtyMinutesToolStripMenuItem2";
             thirtyMinutesToolStripMenuItem2.Size = new Size(133, 22);
-            thirtyMinutesToolStripMenuItem2.Text = "30 minutes";
+            thirtyMinutesToolStripMenuItem2.Text = _str30Minutes;
             thirtyMinutesToolStripMenuItem2.Click += new EventHandler(thirtyMinutesToolStripMenuItem2_Click);
             // 
             // oneHourToolStripMenuItem
             // 
             oneHourToolStripMenuItem.Name = "oneHourToolStripMenuItem";
             oneHourToolStripMenuItem.Size = new Size(133, 22);
-            oneHourToolStripMenuItem.Text = "1 hour";
+            oneHourToolStripMenuItem.Text = _str1Hour;
             oneHourToolStripMenuItem.Click += new EventHandler(oneHourToolStripMenuItem_Click);
             // 
             // twoHoursToolStripMenuItem
             // 
             twoHoursToolStripMenuItem.Name = "twoHoursToolStripMenuItem";
             twoHoursToolStripMenuItem.Size = new Size(133, 22);
-            twoHoursToolStripMenuItem.Text = "2 hours";
+            twoHoursToolStripMenuItem.Text = _str2Hours;
             twoHoursToolStripMenuItem.Click += new EventHandler(twoHoursToolStripMenuItem_Click);
             // 
             // fiveHoursToolStripMenuItem1
             // 
             fiveHoursToolStripMenuItem1.Name = "fiveHoursToolStripMenuItem1";
             fiveHoursToolStripMenuItem1.Size = new Size(133, 22);
-            fiveHoursToolStripMenuItem1.Text = "5 hours";
+            fiveHoursToolStripMenuItem1.Text = _str5Hours;
             fiveHoursToolStripMenuItem1.Click += new EventHandler(fiveHoursToolStripMenuItem1_Click);
             // 
             // toolStripSeparator2
@@ -174,7 +177,7 @@ namespace Caffeine
             // 
             quitToolStripMenuItem.Name = "quitToolStripMenuItem";
             quitToolStripMenuItem.Size = new Size(171, 22);
-            quitToolStripMenuItem.Text = "Quit";
+            quitToolStripMenuItem.Text = _strQuit;
             quitToolStripMenuItem.Click += new EventHandler(quitToolStripMenuItem_Click);
             // 
             // timer1
