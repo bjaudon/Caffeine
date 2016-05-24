@@ -1,7 +1,7 @@
 ﻿/*
  * Name: Program Class
  * Synopsis: Main Program entry
- * Author: Bryan Jaudon<bryan.jaudon@gmail.com>
+ * Author: Bryan Jaudon <bryan.jaudon@gmail.com>
  * Date: 5/10/2016
  */
 
@@ -28,8 +28,8 @@ namespace Caffeine
                 try
                 {
                     Application.EnableVisualStyles(); 
-                    Application.SetCompatibleTextRenderingDefault(false); 
-                    Application.Run(new CaffeineMainForm());
+                    Application.SetCompatibleTextRenderingDefault(false);
+                    Application.Run(new CaffeineGUIMain());
                 }
                 finally
                 {

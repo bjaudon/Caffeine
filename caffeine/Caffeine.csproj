@@ -49,24 +49,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="About.cs">
+    <Compile Include="About Form\About.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="About.Designer.cs">
+    <Compile Include="About Form\About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
-    <Compile Include="CaffeineCore.cs" />
-    <Compile Include="ExecutionState.cs" />
-    <Compile Include="CaffeineMainForm.cs">
+    <Compile Include="GUI\CaffeineGUIMethods.cs" />
+    <Compile Include="GUI\CaffeineGUIEventHandlers.cs" />
+    <Compile Include="Core Methods\CaffeineCore.cs" />
+    <Compile Include="Enums\CaffeineEnums.cs" />
+    <Compile Include="GUI\CaffeineGUIMain.cs" />
+    <Compile Include="Core Methods\ExecutionState.cs" />
+    <Compile Include="Preference Form\PreferenceWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CaffeineMainForm.Designer.cs">
-      <DependentUpon>CaffeineMainForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PreferenceWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PreferenceWindow.Designer.cs">
+    <Compile Include="Preference Form\PreferenceWindow.Designer.cs">
       <DependentUpon>PreferenceWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -76,13 +74,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="About.resx">
+    <EmbeddedResource Include="About Form\About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CaffeineMainForm.resx">
-      <DependentUpon>CaffeineMainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PreferenceWindow.resx">
+    <EmbeddedResource Include="Preference Form\PreferenceWindow.resx">
       <DependentUpon>PreferenceWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -128,6 +123,7 @@
   <ItemGroup>
     <None Include="Resources\16x16 Inactive.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
