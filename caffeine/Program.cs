@@ -13,8 +13,8 @@ namespace Caffeine
 {
     static class Program
     {
-        
-         // Use Mutex to ensure only one copy of Caffeine is running at a time.
+
+        // Use Mutex to ensure only one copy of Caffeine is running at a time.
         static Mutex mutex = new Mutex(true, "{cfb38b98-cccc-452e-8d48-fd2562757fbd}");
 
         /// <summary>
@@ -23,11 +23,11 @@ namespace Caffeine
         [STAThread]
         static void Main()
         {
-            if (mutex.WaitOne(TimeSpan.Zero,true))
+            if (mutex.WaitOne(TimeSpan.Zero, true))
             {
                 try
                 {
-                    Application.EnableVisualStyles(); 
+                    Application.EnableVisualStyles();
                     Application.SetCompatibleTextRenderingDefault(false);
                     Application.Run(new CaffeineGUIMain());
                 }
@@ -36,8 +36,6 @@ namespace Caffeine
                     mutex.ReleaseMutex();
                 }
             }
-            else { MessageBox.Show("Only one instance of Caffeine can be run at a time!", "Caffeine", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-            
         }
     }
 }
