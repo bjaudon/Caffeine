@@ -29,6 +29,8 @@ namespace Caffeine
         private ToolStripMenuItem oneHourToolStripMenuItem = new ToolStripMenuItem();
         private ToolStripMenuItem twoHoursToolStripMenuItem = new ToolStripMenuItem();
         private ToolStripMenuItem fiveHoursToolStripMenuItem1 = new ToolStripMenuItem();
+        private ToolStripMenuItem eightHoursToolStripMenuItem1 = new ToolStripMenuItem();
+        private ToolStripMenuItem oneDayToolStripMenuItem1 = new ToolStripMenuItem();
         private ToolStripSeparator toolStripSeparator2 = new ToolStripSeparator();
         private ToolStripMenuItem quitToolStripMenuItem = new ToolStripMenuItem();
         private Timer timer1 = new Timer();
@@ -107,7 +109,9 @@ namespace Caffeine
              thirtyMinutesToolStripMenuItem2,
              oneHourToolStripMenuItem,
              twoHoursToolStripMenuItem,
-             fiveHoursToolStripMenuItem1});
+             fiveHoursToolStripMenuItem1,
+             eightHoursToolStripMenuItem1,
+             oneDayToolStripMenuItem1});
             activateForToolStripMenuItem.Name = "activateForToolStripMenuItem";
             activateForToolStripMenuItem.Size = new Size(171, 22);
             activateForToolStripMenuItem.Text = _strContextActivateFor;
@@ -167,6 +171,20 @@ namespace Caffeine
             fiveHoursToolStripMenuItem1.Size = new Size(133, 22);
             fiveHoursToolStripMenuItem1.Text = _strContext5Hours;
             fiveHoursToolStripMenuItem1.Click += new EventHandler(fiveHoursToolStripMenuItem1_Click);
+            // 
+            // eightHoursToolStripMenuItem1
+            // 
+            eightHoursToolStripMenuItem1.Name = "eightHoursToolStripMenuItem1";
+            eightHoursToolStripMenuItem1.Size = new Size(133, 22);
+            eightHoursToolStripMenuItem1.Text = _strContext8Hours;
+            eightHoursToolStripMenuItem1.Click += new EventHandler(eightHoursToolStripMenuItem1_Click);
+            // 
+            // oneDayToolStripMenuItem1
+            // 
+            oneDayToolStripMenuItem1.Name = "oneDayToolStripMenuItem1";
+            oneDayToolStripMenuItem1.Size = new Size(133, 22);
+            oneDayToolStripMenuItem1.Text = _strContext1Day;
+            oneDayToolStripMenuItem1.Click += new EventHandler(oneDayToolStripMenuItem1_Click);
             // 
             // toolStripSeparator2
             // 

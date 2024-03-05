@@ -25,6 +25,8 @@
         public const string _strContext1Hour = "&1 Hour";
         public const string _strContext2Hours = "&2 Hours";
         public const string _strContext5Hours = "5 &Hours";
+        public const string _strContext8Hours = "&8 Hours";
+        public const string _strContext1Day = "&1 Day";
         public const string _strContextQuit = "&Quit";
 
         // Preference window items
@@ -44,6 +46,8 @@
         public const string _strPref1Hour = "1 Hour";
         public const string _strPref2Hours = "2 Hours";
         public const string _strPref5Hours = "5 Hours";
+        public const string _strPref8Hours = "8 Hours";
+        public const string _strPref1Day = "1 Day";
 
         //About Window
         public const string _strAboutOK = "&OK";

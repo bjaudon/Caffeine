@@ -29,7 +29,7 @@ namespace Caffeine
             lblDefaultDuration.Text = _strPrefDefaultDuration;
             comboDefaultDuration.Items.AddRange(new object[] {
             _strPrefIndefinitely, _strPref5Minutes, _strPref10Minutes, _strPref15Minutes, _strPref30Minutes,
-            _strPref1Hour, _strPref2Hours, _strPref5Hours});
+            _strPref1Hour, _strPref2Hours, _strPref5Hours,_strPref8Hours,_strPref1Day});
             Text = _strPrefWelcomeTitle;
 
 

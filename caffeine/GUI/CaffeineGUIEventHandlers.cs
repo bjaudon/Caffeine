@@ -142,6 +142,26 @@ namespace Caffeine
         }
 
         /// <summary>
+        /// Activate for x time.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void eightHoursToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            activateCaffeine(TimeInterval.eightHours);
+        }
+
+        /// <summary>
+        /// Activate for x time.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void oneDayToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            activateCaffeine(TimeInterval.oneDay);
+        }
+
+        /// <summary>
         /// Toggle caffeine mode for the Activate/Deactivate contect menu.
         /// </summary>
         /// <param name="sender"></param>

@@ -15,6 +15,8 @@
             oneHour = 5,
             twoHours = 6,
             fiveHours = 7,
+            eightHours = 8,
+            oneDay = 9,
 
         }
 
@@ -32,6 +34,8 @@
             oneHour = 3600000,
             twoHours = 7200000,
             fiveHours = 18000000,
+            eightHours = 28800000,
+            oneDay = 86400000,
         }
     }
 }
