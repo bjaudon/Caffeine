@@ -28,123 +28,138 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnClose = new System.Windows.Forms.Button();
-            this.lblWelcome = new System.Windows.Forms.Label();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.chkAutoStart = new System.Windows.Forms.CheckBox();
-            this.chkLaunchatStartup = new System.Windows.Forms.CheckBox();
-            this.chkShowMessage = new System.Windows.Forms.CheckBox();
-            this.lblDefaultDuration = new System.Windows.Forms.Label();
-            this.comboDefaultDuration = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
-            this.SuspendLayout();
+            btnClose = new System.Windows.Forms.Button();
+            lblWelcome = new System.Windows.Forms.Label();
+            pbLogo = new System.Windows.Forms.PictureBox();
+            chkAutoStart = new System.Windows.Forms.CheckBox();
+            chkLaunchatStartup = new System.Windows.Forms.CheckBox();
+            chkShowMessage = new System.Windows.Forms.CheckBox();
+            lblDefaultDuration = new System.Windows.Forms.Label();
+            comboDefaultDuration = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
+            SuspendLayout();
             // 
             // btnClose
             // 
-            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.Location = new System.Drawing.Point(370, 230);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 3;
-            this.btnClose.Text = "btnClose";
-            this.btnClose.UseVisualStyleBackColor = true;
+            btnClose.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            btnClose.Location = new System.Drawing.Point(660, 479);
+            btnClose.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new System.Drawing.Size(168, 45);
+            btnClose.TabIndex = 3;
+            btnClose.Text = "btnClose";
+            btnClose.UseVisualStyleBackColor = true;
             // 
             // lblWelcome
             // 
-            this.lblWelcome.Location = new System.Drawing.Point(148, 25);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(288, 62);
-            this.lblWelcome.TabIndex = 5;
-            this.lblWelcome.Text = "lblWelcome";
+            lblWelcome.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            lblWelcome.Location = new System.Drawing.Point(320, 34);
+            lblWelcome.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            lblWelcome.Name = "lblWelcome";
+            lblWelcome.Size = new System.Drawing.Size(476, 200);
+            lblWelcome.TabIndex = 5;
+            lblWelcome.Text = "lblWelcome";
             // 
             // pbLogo
             // 
-            this.pbLogo.Image = global::Caffeine.Properties.Resources.imgCaffeineNew;
-            this.pbLogo.Location = new System.Drawing.Point(12, 12);
-            this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(130, 116);
-            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbLogo.TabIndex = 4;
-            this.pbLogo.TabStop = false;
+            pbLogo.Image = Properties.Resources.imgCaffeineNew;
+            pbLogo.Location = new System.Drawing.Point(30, 34);
+            pbLogo.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            pbLogo.Name = "pbLogo";
+            pbLogo.Size = new System.Drawing.Size(255, 254);
+            pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            pbLogo.TabIndex = 4;
+            pbLogo.TabStop = false;
             // 
             // chkAutoStart
             // 
-            this.chkAutoStart.AutoSize = true;
-            this.chkAutoStart.Location = new System.Drawing.Point(151, 111);
-            this.chkAutoStart.Name = "chkAutoStart";
-            this.chkAutoStart.Size = new System.Drawing.Size(88, 17);
-            this.chkAutoStart.TabIndex = 6;
-            this.chkAutoStart.Text = "chkAutoStart";
-            this.chkAutoStart.UseVisualStyleBackColor = true;
-            this.chkAutoStart.CheckedChanged += new System.EventHandler(this.chkAutoStart_CheckedChanged);
+            chkAutoStart.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            chkAutoStart.AutoSize = true;
+            chkAutoStart.Location = new System.Drawing.Point(301, 243);
+            chkAutoStart.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            chkAutoStart.Name = "chkAutoStart";
+            chkAutoStart.Size = new System.Drawing.Size(140, 29);
+            chkAutoStart.TabIndex = 6;
+            chkAutoStart.Text = "chkAutoStart";
+            chkAutoStart.UseVisualStyleBackColor = true;
+            chkAutoStart.CheckedChanged += chkAutoStart_CheckedChanged;
             // 
             // chkLaunchatStartup
             // 
-            this.chkLaunchatStartup.AutoSize = true;
-            this.chkLaunchatStartup.Location = new System.Drawing.Point(151, 135);
-            this.chkLaunchatStartup.Name = "chkLaunchatStartup";
-            this.chkLaunchatStartup.Size = new System.Drawing.Size(123, 17);
-            this.chkLaunchatStartup.TabIndex = 7;
-            this.chkLaunchatStartup.Text = "chkLaunchatStartup";
-            this.chkLaunchatStartup.UseVisualStyleBackColor = true;
-            this.chkLaunchatStartup.CheckedChanged += new System.EventHandler(this.chkLaunchatStartup_CheckedChanged);
+            chkLaunchatStartup.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            chkLaunchatStartup.AutoSize = true;
+            chkLaunchatStartup.Location = new System.Drawing.Point(301, 290);
+            chkLaunchatStartup.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            chkLaunchatStartup.Name = "chkLaunchatStartup";
+            chkLaunchatStartup.Size = new System.Drawing.Size(192, 29);
+            chkLaunchatStartup.TabIndex = 7;
+            chkLaunchatStartup.Text = "chkLaunchatStartup";
+            chkLaunchatStartup.UseVisualStyleBackColor = true;
+            chkLaunchatStartup.CheckedChanged += chkLaunchatStartup_CheckedChanged;
             // 
             // chkShowMessage
             // 
-            this.chkShowMessage.AutoSize = true;
-            this.chkShowMessage.Location = new System.Drawing.Point(151, 159);
-            this.chkShowMessage.Name = "chkShowMessage";
-            this.chkShowMessage.Size = new System.Drawing.Size(114, 17);
-            this.chkShowMessage.TabIndex = 8;
-            this.chkShowMessage.Text = "chkShowMessage";
-            this.chkShowMessage.UseVisualStyleBackColor = true;
-            this.chkShowMessage.CheckedChanged += new System.EventHandler(this.chkShowMessage_CheckedChanged);
+            chkShowMessage.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            chkShowMessage.AutoSize = true;
+            chkShowMessage.Location = new System.Drawing.Point(301, 337);
+            chkShowMessage.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            chkShowMessage.Name = "chkShowMessage";
+            chkShowMessage.Size = new System.Drawing.Size(179, 29);
+            chkShowMessage.TabIndex = 8;
+            chkShowMessage.Text = "chkShowMessage";
+            chkShowMessage.UseVisualStyleBackColor = true;
+            chkShowMessage.CheckedChanged += chkShowMessage_CheckedChanged;
             // 
             // lblDefaultDuration
             // 
-            this.lblDefaultDuration.AutoSize = true;
-            this.lblDefaultDuration.Location = new System.Drawing.Point(148, 186);
-            this.lblDefaultDuration.Name = "lblDefaultDuration";
-            this.lblDefaultDuration.Size = new System.Drawing.Size(91, 13);
-            this.lblDefaultDuration.TabIndex = 9;
-            this.lblDefaultDuration.Text = "lblDefaultDuration";
+            lblDefaultDuration.AutoSize = true;
+            lblDefaultDuration.Location = new System.Drawing.Point(301, 383);
+            lblDefaultDuration.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            lblDefaultDuration.Name = "lblDefaultDuration";
+            lblDefaultDuration.Size = new System.Drawing.Size(157, 25);
+            lblDefaultDuration.TabIndex = 9;
+            lblDefaultDuration.Text = "lblDefaultDuration";
             // 
             // comboDefaultDuration
             // 
-            this.comboDefaultDuration.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboDefaultDuration.FormattingEnabled = true;
-            this.comboDefaultDuration.Location = new System.Drawing.Point(246, 183);
-            this.comboDefaultDuration.Name = "comboDefaultDuration";
-            this.comboDefaultDuration.Size = new System.Drawing.Size(121, 21);
-            this.comboDefaultDuration.TabIndex = 10;
-            this.comboDefaultDuration.SelectedIndexChanged += new System.EventHandler(this.comboDefaultDuration_SelectedIndexChanged);
+            comboDefaultDuration.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            comboDefaultDuration.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            comboDefaultDuration.FormattingEnabled = true;
+            comboDefaultDuration.Location = new System.Drawing.Point(498, 380);
+            comboDefaultDuration.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            comboDefaultDuration.Name = "comboDefaultDuration";
+            comboDefaultDuration.Size = new System.Drawing.Size(298, 33);
+            comboDefaultDuration.TabIndex = 10;
+            comboDefaultDuration.SelectedIndexChanged += comboDefaultDuration_SelectedIndexChanged;
             // 
             // PreferenceWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.btnClose;
-            this.ClientSize = new System.Drawing.Size(458, 261);
-            this.ControlBox = false;
-            this.Controls.Add(this.comboDefaultDuration);
-            this.Controls.Add(this.lblDefaultDuration);
-            this.Controls.Add(this.chkShowMessage);
-            this.Controls.Add(this.chkLaunchatStartup);
-            this.Controls.Add(this.chkAutoStart);
-            this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.lblWelcome);
-            this.Controls.Add(this.pbLogo);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "PreferenceWindow";
-            this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PreferencesWindow";
-            this.TopMost = true;
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            CancelButton = btnClose;
+            ClientSize = new System.Drawing.Size(845, 542);
+            ControlBox = false;
+            Controls.Add(comboDefaultDuration);
+            Controls.Add(lblDefaultDuration);
+            Controls.Add(chkShowMessage);
+            Controls.Add(chkLaunchatStartup);
+            Controls.Add(chkAutoStart);
+            Controls.Add(btnClose);
+            Controls.Add(lblWelcome);
+            Controls.Add(pbLogo);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "PreferenceWindow";
+            ShowInTaskbar = false;
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "PreferencesWindow";
+            TopMost = true;
+            ((System.ComponentModel.ISupportInitialize)pbLogo).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
