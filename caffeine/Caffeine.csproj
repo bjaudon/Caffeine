@@ -11,14 +11,16 @@
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Resources\active.ico" />
+    <None Remove="Resources\caffeineicon.ico" />
+    <None Remove="Resources\caffeineicon.png" />
+    <None Remove="Resources\inactive.ico" />
+  </ItemGroup>
 
   <!-- Preserve explicit resource and config files that may not be auto-detected or need metadata -->
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Resources\caffeineicon.ico" />
-    <None Include="Resources\caffeineicon.png" />
-    <None Include="Resources\active.ico" />
-    <None Include="Resources\inactive.ico" />
     <None Include="Resources\caffeineNew_Black.ico" />
     <Content Include="Resources\imgCaffeineNew.png" />
     <None Include="Resources\caffeineNewIcon.ico" />
@@ -52,6 +54,7 @@
     <Compile Include="About Form\About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
+    <Compile Include="Preference Form\PreferenceWindow.DpiSupport.cs" />
     <Compile Include="Strings\CaffeineStrings.cs" />
     <Compile Include="GUI\CaffeineGUIMethods.cs" />
     <Compile Include="GUI\CaffeineGUIEventHandlers.cs" />

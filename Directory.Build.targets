@@ -1,0 +1,6 @@
+<Project>
+  <!-- Directory.Build.targets intentionally cleared.
+       Icon-generation (GenerateMultiIcon) and multi-size icon references removed to avoid MSBuild inline task
+       compilation and System.Drawing.Common reference issues. If you want an MSBuild task, create a separate
+       task assembly and reference it explicitly instead of using CodeTaskFactory inline code. -->
+</Project>

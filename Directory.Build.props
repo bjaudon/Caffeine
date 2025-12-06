@@ -1,0 +1,9 @@
+<Project>
+  <PropertyGroup>
+    <!-- Ensure MSBuild's CodeTaskFactory compiles inline tasks with a recent C# -->
+    <LangVersion>preview</LangVersion>
+
+    <!-- Ensure Windows Forms symbols (Icon/NotifyIcon) are available for SDK-style projects -->
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+</Project>

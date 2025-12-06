@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Bryan Jaudon")]
 [assembly: AssemblyProduct("Caffeine")]
-[assembly: AssemblyCopyright("Copyright ©  2016 Bryan Jaudon")]
+[assembly: AssemblyCopyright("Copyright ©  2016-2025 Bryan Jaudon")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -30,6 +30,5 @@ using System.Runtime.InteropServices;
 //      Revision
 //
 // Use explicit version numbers - wildcards are not supported in deterministic builds.
-[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyVersion("2.0.0.0")]
 [assembly: NeutralResourcesLanguage("en")]
-//[assembly: AssemblyFileVersion("1.0.0.0")]
