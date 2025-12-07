@@ -54,7 +54,6 @@
     <Compile Include="About Form\About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
-    <Compile Include="Preference Form\PreferenceWindow.DpiSupport.cs" />
     <Compile Include="Strings\CaffeineStrings.cs" />
     <Compile Include="GUI\CaffeineGUIMethods.cs" />
     <Compile Include="GUI\CaffeineGUIEventHandlers.cs" />
