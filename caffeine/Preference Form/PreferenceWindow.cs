@@ -62,7 +62,7 @@ namespace Caffeine
             // Set our Registry run key for Startup at logon.
             if (chkAutoStart.Checked)
             {
-                rk.SetValue(_strName, "\"" + System.Reflection.Assembly.GetExecutingAssembly().Location + "\"", RegistryValueKind.String);
+                rk.SetValue(_strName, "\"" + System.Environment.ProcessPath + "\"", RegistryValueKind.String);
             }
             else
             {
